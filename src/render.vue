@@ -26,20 +26,20 @@ export default {
         value: {
             // 初始 value
             type: String,
-            default: "",
+            default: ""
         },
         xssOptions: {
             // XSS 选项
             type: [Object, Boolean],
             default() {
                 return {};
-            },
+            }
         },
         html: {
             // Enable HTML tags in source
             type: Boolean,
-            default: true,
-        },
+            default: true
+        }
     },
     data() {
         return {
@@ -52,7 +52,7 @@ export default {
             d_preview_imgsrc: null, // 图片预览地址
 
             // xss
-            _xssHandler: null,
+            _xssHandler: null
         };
     },
     computed: {},
@@ -63,7 +63,7 @@ export default {
                 $vm.d_render = res;
                 $vm.$emit("change", $vm.d_value, $vm.d_render);
             });
-        },
+        }
     },
     watch: {
         d_value: function (val, oldVal) {
@@ -73,7 +73,7 @@ export default {
             if (val !== this.d_value) {
                 this.d_value = val;
             }
-        },
+        }
     },
     created() {},
     mounted() {
@@ -87,6 +87,6 @@ export default {
             mdIt = initMarkdown();
         }
         return mdIt;
-    },
+    }
 };
 </script>

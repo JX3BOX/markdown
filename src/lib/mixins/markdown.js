@@ -9,7 +9,7 @@ var markdown_config = {
     langPrefix: "lang-", // CSS language prefix for fenced blocks. Can be
     linkify: false, // 自动识别url
     typographer: true,
-    quotes: "“”‘’",
+    quotes: "“”‘’"
 };
 
 var MarkdownIt = require("markdown-it");
@@ -50,7 +50,7 @@ var hljs_opts = {
             missLangs[lang] = 1;
             needLangs.push(hljsLangs[lang]);
         }
-    },
+    }
 };
 
 export function initMarkdown() {
@@ -104,7 +104,7 @@ export function initMarkdown() {
 export default {
     data() {
         return {
-            markdownIt: null,
+            markdownIt: null
         };
     },
     created() {
@@ -145,11 +145,11 @@ export default {
                     }
                 });
             }
-        },
+        }
     },
     watch: {
         ishljs: function (val) {
             hljs_opts.highlighted = val;
-        },
-    },
+        }
+    }
 };

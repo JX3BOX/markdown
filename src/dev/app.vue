@@ -13,7 +13,7 @@ import 'highlight.js/styles/github.css';
 
 export default {
     components: {
-        render,
+        render
     },
     data() {
         return {
@@ -28,11 +28,15 @@ export default {
                     iframe: ["src", "frameborder", "scrolling", "allowfullscreen"],
                     details: [],
                     summary: [],
-                },
-            },
+                    p: [],
+                    img: ["src", "class", "alt", "title"],
+                    a: ["data-type", "class", "data-mode", "data-quality", "data-client", "data-id", "target", "href"],
+                    span: ["class"]
+                }
+            }
         };
     },
-    mounted : function (){
+    mounted : function () {
         hljs.highlightAll();
     }
 };
